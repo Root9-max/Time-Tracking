@@ -9,26 +9,32 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MenuActivity : AppCompatActivity() {
 
+    private lateinit var btnTimesheetEntry: Button
+    private lateinit var btnCategories: Button
+    private lateinit var btnSettings: Button
+    private lateinit var btnLogin : Button
+    private lateinit var btnViewEntriesActivity : Button
+    private lateinit var btnBackToMenu: Button
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menu_activity)
 
         // Initialize buttons
-        val btnTimesheetEntry: Button = findViewById(R.id.btnTimesheetEntry)
-        val btnCategories: Button = findViewById(R.id.btnCategories)
-        val btnSettings: Button = findViewById(R.id.btnSettings)
-        val btnLogin : Button = findViewById(R.id.btnLogin)
-        val btnViewEntriesActivity : Button = findViewById(R.id.btnViewEntries)
+        btnTimesheetEntry = findViewById(R.id.btnTimesheetEntry)
+        btnCategories = findViewById(R.id.btnCategories)
+        btnSettings = findViewById(R.id.btnSettings)
+        btnLogin = findViewById(R.id.btnLogin)
+        btnViewEntriesActivity = findViewById(R.id.btnViewEntries)
+        btnBackToMenu = findViewById(R.id.btnBackToMenu)
 
-        // In your activity class, after setContentView is called
         val btnBackToMenu: Button = findViewById(R.id.btnBackToMenu)
         btnBackToMenu.setOnClickListener {
-            // Navigate back to the menu activity
-            val intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
-            finish() // Optional: Close the current activity
+            // Navigate back to the previous activity (if applicable)
+            onBackPressed()
         }
+
+
 
         // Set click listeners for buttons
         btnTimesheetEntry.setOnClickListener {
