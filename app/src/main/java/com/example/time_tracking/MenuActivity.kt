@@ -26,15 +26,15 @@ class MenuActivity : AppCompatActivity() {
         btnLogin = findViewById(R.id.btnLogin)
         btnViewEntriesActivity = findViewById(R.id.btnViewEntries)
 
-
-
-
-
-
         // Set click listeners for buttons
         btnTimesheetEntry.setOnClickListener {
             // Navigate to TimesheetEntryActivity
             startActivity(Intent(this, TimesheetEntryActivity::class.java))
+        }
+
+        btnLogin.setOnClickListener {
+            // Navigate to TimesheetEntryActivity
+            startActivity(Intent(this, LoginActivity::class.java))
         }
 
         btnCategories.setOnClickListener {
@@ -45,6 +45,10 @@ class MenuActivity : AppCompatActivity() {
         btnSettings.setOnClickListener {
             // Navigate to SettingsActivity
             startActivity(Intent(this, SettingsActivity::class.java))
+        }
+        btnViewEntriesActivity.setOnClickListener {
+            // Navigate to TimesheetEntryActivity
+            startActivity(Intent(this, ViewEntriesActivity::class.java))
         }
 
     }
