@@ -1,5 +1,5 @@
 package com.example.time_tracking
-import android.annotation.SuppressLint
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -14,8 +14,7 @@ class MenuActivity : AppCompatActivity() {
     private lateinit var btnSettings: Button
     private lateinit var btnLogin : Button
     private lateinit var btnViewEntriesActivity : Button
-    private lateinit var btnBackToMenu: Button
-    @SuppressLint("MissingInflatedId")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menu_activity)
@@ -26,13 +25,9 @@ class MenuActivity : AppCompatActivity() {
         btnSettings = findViewById(R.id.btnSettings)
         btnLogin = findViewById(R.id.btnLogin)
         btnViewEntriesActivity = findViewById(R.id.btnViewEntries)
-        btnBackToMenu = findViewById(R.id.btnBackToMenu)
 
-        val btnBackToMenu: Button = findViewById(R.id.btnBackToMenu)
-        btnBackToMenu.setOnClickListener {
-            // Navigate back to the previous activity (if applicable)
-            onBackPressed()
-        }
+
+
 
 
 

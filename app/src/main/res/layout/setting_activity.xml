@@ -28,6 +28,14 @@
             android:layout_height="wrap_content"
             android:text="Save Settings"/>
 
+        <Button
+            android:id="@+id/btnBackToMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnSaveSettings"
+            android:layout_marginTop="20dp"
+            android:text="Back to Menu"/>
+
     </LinearLayout>
 
 
